@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         // บรรทัก 42 เติม f หลัง100 เพื่อให้ 100เป็น float
         // ถ้าใส่ 100.00 จะเป็น type double
         //Log.i(TAG,"height is "+String.valueOf(height));
+        //การแสดงที่แสดงผลในAndroid Studio แต่ไม่แสดงในเครื่องจำลอง
         float bmi = weightKg / (height * height);
         return bmi;
     }
