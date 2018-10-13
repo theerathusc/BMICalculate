@@ -24,11 +24,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 EditText heightEditText = findViewById(R.id.height_edit_text);
                 EditText weightEditText = findViewById(R.id.weight_edit_text);
-                // บรรทักที่ 21-22 คือ การประกาศตัวแปรเพื่ออ้างอิงไปยัง height_edit_text และ weight_edit_text
+                // บรรทักที่ 22-26 คือ การประกาศตัวแปรเพื่ออ้างอิงไปยัง height_edit_text และ weight_edit_text
 
                 int h = Integer.parseInt(heightEditText.getText().toString());
                 int w = Integer.parseInt(weightEditText.getText().toString());
-                // 25-26 get value in button and transform string to int
+                // บรรทักที่ 29-30 get value in button and transform string to int
 
                 float bmi = calculateBmi(h,w);
                 // call method calculateBmi(h,w) into bmi
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                     resultText = "อ้วนมาก";
 
 
-//                String msg = "Value BMI is "+String.format(Locale.US,"%.2f",bmi);
+                //String msg = "Value BMI is "+String.format(Locale.US,"%.2f",bmi);
                 String msg = "เกณฑ์น้ำหนักของคุณ: "+resultText;
                 Toast t =Toast.makeText(MainActivity.this,msg,Toast.LENGTH_LONG);
                 t.show(); //Toast.makeText(MainActivity.this,msg,Toast.LENGTH_LONG).show();
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
                 dialog.setTitle("Result");
                 dialog.setMessage(msg);
-                // 47-47 ทำการ set dialog
+                // 54-56 ทำการ set dialog
 
                 dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
