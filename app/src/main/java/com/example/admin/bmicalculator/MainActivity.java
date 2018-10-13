@@ -4,7 +4,6 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
                 int h = Integer.parseInt(heightEditText.getText().toString());
                 int w = Integer.parseInt(weightEditText.getText().toString());
-                // 25-26 get value in button and transfor string to int
+                // 25-26 get value in button and transform string to int
 
                 float bmi = calculateBmi(h,w);
                 // call method calculateBmi(h,w) into bmi
@@ -69,14 +68,14 @@ public class MainActivity extends AppCompatActivity {
                 dialog.show();
                 //todo : show dialog
 
-                //todo :สามารถเขียนdialog อีกแบบได้ เช่น บรรทัดที่ 75-79
+                //todo :สามารถเขียนdialog อีกแบบได้ เช่น บรรทัดที่ 73-77
                 //new AlertDialog.Builder(MainActivity.this)
                 // .setTitle("Result")
                 // .setMessage(msg)
                 // .setPositiveButton("OK",nul)
                 // .setNegativeButton("No",null).show;
 
-                //todo : libraly Glide เป็น libraly ที่เอาไว้โหลดรูปจาก internet (บรรทัด 82)
+                //todo : libraly Glide เป็น libraly ที่เอาไว้โหลดรูปจาก internet (บรรทัด 79)
                 //Glide.with(context).load(URL).into(imageview);
             }
         });
@@ -87,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         float height = heightIncm / 100f;
         // บรรทัก 42 เติม f หลัง100 เพื่อให้ 100เป็น float
         // ถ้าใส่ 100.00 จะเป็น type double
-        Log.i(TAG,"height is "+String.valueOf(height));
+        //Log.i(TAG,"height is "+String.valueOf(height));
         float bmi = weightKg / (height * height);
         return bmi;
     }
