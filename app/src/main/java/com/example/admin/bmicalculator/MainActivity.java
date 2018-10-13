@@ -1,6 +1,5 @@
 package com.example.admin.bmicalculator;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -51,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 //Toast มันจะโชว์แปปเดียว
 
                 // ต่อไปนี้จะทำให้เป็นหน้าต่างแสดงมาเลย
-                AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+                /*AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
                 dialog.setTitle("Result");
                 dialog.setMessage(msg);
                 // 54-56 ทำการ set dialog
@@ -66,14 +65,15 @@ public class MainActivity extends AppCompatActivity {
                 dialog.setCancelable(false);
                 //todo : ถ้าไม่ใส่ dialog.setCancelable(false); เราจะสามารถออกจากหน้าต่างของ dialog โดยการกดข้างนอกปุ่มได้ แต่ถ้าใส่ เราต้องกดปุ่มใน dialog เท่านั้นจึงจะออกจากหน้าต่างของ dialog ได้
                 dialog.show();
-                //todo : show dialog
+                //todo : show dialog*/
 
                 //todo :สามารถเขียนdialog อีกแบบได้ เช่น บรรทัดที่ 73-77
-                //new AlertDialog.Builder(MainActivity.this)
-                // .setTitle("Result")
-                // .setMessage(msg)
-                // .setPositiveButton("OK",nul)
-                // .setNegativeButton("No",null).show;
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Result")
+                        .setMessage(msg)
+                        .setCancelable(false)
+                        .setPositiveButton("OK", null)
+                        .setNegativeButton("NO", null).show();
 
                 //todo : libraly Glide เป็น libraly ที่เอาไว้โหลดรูปจาก internet (บรรทัด 79)
                 //Glide.with(context).load(URL).into(imageview);
